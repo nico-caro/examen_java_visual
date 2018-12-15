@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Zoo Concepción</title>
+</head>
+<body>
+    <center>
+            <h1>Sistema de gestión de animales</h1>
+    </center>
+    
+    <div id="app" class="container nicolas" >
+
+       <a> <router-link to="/listar">Listar Animales</router-link> |</a>
+        <router-link to="/agregar">Agregar Animales</router-link> |        
+        <router-link to="/tipos">Lista de Tipos</router-link> |
+        <router-link to="/agregartipos">Agregar Tipos</router-link> |
+            <div>
+                <router-view></router-view>
+            </div>
+      
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="servicios/config.js"></script>
+    <script src="servicios/AnimalService.js"></script>
+    <script src="servicios/TipoService.js"></script>
+    <script src="servicios/SectorService.js"></script>
+    <script src="componentes/listarAnimales.js"></script>
+    <script src="componentes/agregarAnimal.js"></script>
+    <script src="componentes/listarTipos.js"></script>
+    <script src="componentes/agregarTipos.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

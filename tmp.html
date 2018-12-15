@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+        <div class="container">
+                <div class="col-sm-5">
+                
+                
+                    <div class="form-group">
+                                <form>
+                                    <label>Nombre</label>
+                                    <input type="text" v-model="nombre" class="form-control" > 
+                                    <br>
+                                    <label >Peso</label>
+                                    <input type="number" v-model="peso" class="form-control">
+                                    <br>
+                                    <label >Tipo</label>
+                                    <select v-model="tipoId" name="" id="" class="form-control">
+                                        <option value="">Seleccionar</option>
+                                        <option v-for="t in tipos" v-bind:value=" t.id "> {{ t.nombre }}</option>
+                
+                                    </select>
+                                    <br>
+                                    <label >Sector</label>
+                                    <select v-model="sectorId" name="" id="" class="form-control">
+                                        <option value="">Seleccionar</option>
+                                    </select>
+                                    <br>
+                                    <label >Genero</label>
+                                    <select v-model="genero" name="" id="" class="form-control" >
+                                        <option value="">Seleccionar</option>
+                                        <option value="masculino">Masculino</option>
+                                        <option value="femenino">Femenino</option>
+                                    </select>
+                                    <br>
+                                    <label >Fecha Ingreso</label>
+                                    <input type="date" v-model="fechaIngreso" class="form-control">
+                                    <br>
+                                    <label >Fecha Nacimiento</label>
+                                    <input type="date" v-model="fechaNacimiento" class="form-control">
+                                    <br>
+                                    <label >Fecha Defunción</label>
+                                    <input type="date" v-model="fechaDefuncion" class="form-control">
+                                    <br>
+                                    <center>
+                                    <input type="button" value="Guardar" class="btn btn-success">
+                                    <input type="reset" value="Limpiar" class="btn btn-danger">
+                                    </center>
+                                </form>
+                
+                                <div v-if="mensaje">
+                                    <h3> {{mensaje}} </h3>
+                                </div>
+                
+                    </div>
+                </div>
+        </div>
+    
+</body>
+</html>
